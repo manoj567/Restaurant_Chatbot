@@ -1,0 +1,34 @@
+
+version: "2.0"
+stories:
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: Hyderabad
+  - slot_was_set:
+    - location: Hyderabad
+  - action: utter_ask_budget_for_two
+  - intent: budget_for_two
+    entities:
+    - entity: "'budget',value='300'"
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: Hyderabad
+  - action: utter_ask_email
+  - intent: send_email
+    entities:
+    - email: manojgadde13@gmail.com
+  - slot_was_set:
+    - email: manojgadde13@gmail.com
+  - action: action_send_email
+  - intent: affirm
+  - action: utter_goodbye

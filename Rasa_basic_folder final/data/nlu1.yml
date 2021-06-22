@@ -1,0 +1,18 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hello
+- intent: restaurant_search
+  examples: |
+    - show me [mexican](cuisine) restaurants in [mumbai](location)?
+- intent: budget_for_two
+  examples: |
+    - Lesser than Rs. [300](budget)
+- intent: affirm
+  examples: |
+    - [yes](affirm) i need details
+    - okay thanks
+- intent: send_email
+  examples: |
+    - [manojgadde13@gmail.com](email)
